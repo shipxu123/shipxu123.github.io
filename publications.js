@@ -266,9 +266,11 @@ const JOURNALS = [
 //                      RENDER LOGIC (no need to modify)
 // ============================================================
 function renderPublications() {
-  var sortFn = SORT_ORDER === "desc"
-    ? function(a, b) { return b.year - a.year || a._idx - b._idx; }
-    : function(a, b) { return a.year - b.year || a._idx - b._idx; };
+  // Sort: 1st by year, 2nd by original index (stable order within same year)
+  var sortFn = function(a, b) {
+    var cmp = SORT_ORDER === "desc" ? b.year - a.year : a.year - b.year;
+    return cmp !== 0 ? cmp : a._idx - b._idx;
+  };
 
   // Sort conferences
   var sortedConf = CONFERENCES.map(function(p, i) {
