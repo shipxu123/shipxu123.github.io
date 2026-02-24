@@ -15,6 +15,18 @@ const SORT_ORDER = "desc";
 // ============================================================
 const CONFERENCES = [
   {
+    year: 2026,
+    venue: "DAC",
+    content: `<b>Peng Xu</b>, Mingzi Wang, Yapeng Li, Yuyang Ye, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "DiffSP: Differentiable Sequence Pair-based Analog Placement", in
+    ACM/IEEE Design Automation Conference (DAC), Long Beach, Jul. 26–29, 2026.`
+  },
+  {
+    year: 2026,
+    venue: "DAC",
+    content: `Yapeng Li*, <b>Peng Xu*</b>, Mingzi Wang and Tinghuan Chen, "AlphaPlacer: Analog Placement Enhanced by Monte Carlo Tree Search", in
+    ACM/IEEE Design Automation Conference (DAC), Long Beach, Jul. 26–29, 2026.`
+  },
+  {
     year: 2024,
     venue: "DAC",
     content: `<b>Peng Xu</b>, Guojin Chen, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "Performance-driven Analog Routing via Heterogeneous 3DGNN and Potential Relaxation", in
