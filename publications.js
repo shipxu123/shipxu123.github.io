@@ -204,10 +204,16 @@ const CONFERENCES = [
 // ============================================================
 const JOURNALS = [
   {
+    year: 2026,
+    venue: "TODAES",
+    content: `<b>Peng Xu</b>, Yuan Pu, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, “PAPlace: Performance-Driven Differentiable Analog Placement”,
+    accepted by ACM Transactions on Design Automation of Electronic Systems (TODAES), 2026.`
+  },
+  {
     year: 2025,
     venue: "TCAD",
     content: `<b>Peng Xu*</b>, Rong Sun*, Su Zheng, Song Chen, Qi Xu, Bei Yu, "DaVinci: Performance-Driven Analog Routing via Multi-modality Guidance Prediction",
-    accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2026.`
   },
   {
     year: 2025,
