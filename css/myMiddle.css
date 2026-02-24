@@ -72,5 +72,27 @@ table#noborder-mid {
     border-bottom: none;
 }
 
+/* News list styling (dynamic rendering) */
+#news-list {
+  margin-right: 0%;
+  margin-top: 1.2em;
+  margin-bottom: 1.3em;
+  border: 1px solid silver;
+  padding: 0.3em 0.5em;
+  background: #ffffee;
+}
+
+#news-list p {
+  margin-bottom: 0em;
+}
+
+#news-list li p {
+  margin-bottom: 0.5em;
+}
+
+#news-list p + p {
+  margin-top: 0.8em;
+}
+
 
 
