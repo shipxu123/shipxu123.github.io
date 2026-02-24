@@ -316,12 +316,11 @@ const JOURNALS = [
 //                      RENDER LOGIC (no need to modify)
 // ============================================================
 function renderPublications() {
-  // Sort: 1st by year, 2nd by venue name, 3rd by original index
+  // Sort: 1st by year, 2nd by original index
   var sortFn = function(a, b) {
     var cmpYear = SORT_ORDER === "desc" ? b.year - a.year : a.year - b.year;
     if (cmpYear !== 0) return cmpYear;
-    var cmpVenue = (a.venue || "").localeCompare(b.venue || "");
-    return cmpVenue !== 0 ? cmpVenue : a._idx - b._idx;
+    return a._idx - b._idx;
   };
 
   // Sort conferences
@@ -331,7 +330,8 @@ function renderPublications() {
 
   var confHtml = '<h3>Conference Proceedings</h3>\n<ul>\n';
   for (var i = 0; i < sortedConf.length; i++) {
-    confHtml += '  <li><p>\n    [C' + (i + 1) + '] ' + sortedConf[i].content + '\n  </p></li>\n';
+    var confNo = sortedConf.length - i;
+    confHtml += '  <li><p>\n    [C' + confNo + '] ' + sortedConf[i].content + '\n  </p></li>\n';
   }
   confHtml += '</ul>\n';
 
@@ -342,7 +342,8 @@ function renderPublications() {
 
   var jourHtml = '<h3>Journal Articles</h3>\n<ul>\n';
   for (var j = 0; j < sortedJour.length; j++) {
-    jourHtml += '  <li><p>\n    [J' + (j + 1) + '] ' + sortedJour[j].content + '\n  </p></li>\n';
+    var jourNo = sortedJour.length - j;
+    jourHtml += '  <li><p>\n    [J' + jourNo + '] ' + sortedJour[j].content + '\n  </p></li>\n';
   }
   jourHtml += '</ul>\n';
 
