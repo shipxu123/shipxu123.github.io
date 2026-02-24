@@ -323,10 +323,10 @@ function renderPublications() {
     return a._idx - b._idx;
   };
 
-  // Sort conferences
+  // Conferences: keep original order (no sorting)
   var sortedConf = CONFERENCES.map(function(p, i) {
     return { year: p.year, venue: p.venue, content: p.content, _idx: i };
-  }).sort(sortFn);
+  });
 
   var confHtml = '<h3>Conference Proceedings</h3>\n<ul>\n';
   for (var i = 0; i < sortedConf.length; i++) {
