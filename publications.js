@@ -432,7 +432,7 @@ function renderPublications() {
     return { year: p.year, venue: p.venue, content: p.content, _idx: i };
   }).sort(sortFn);
 
-  var confHtml = '<h3>Conference Proceedings</h3>\n<ul>\n';
+  var confHtml = '\n<h3>Conference Proceedings</h3>\n<ul>\n';
   for (var i = 0; i < sortedConf.length; i++) {
     var confNo = sortedConf.length - i;
     confHtml += '  <li><p>\n    [C' + confNo + '] ' + sortedConf[i].content + '\n  </p></li>\n';
