@@ -125,25 +125,6 @@ const CONFERENCES = [
     ACM/IEEE Design Automation Conference (DAC), Long Beach, Jul. 26–29, 2026.`
   },
   {
-    year: 2024,
-    venue: "DAC",
-    content: `<b>Peng Xu</b>, Guojin Chen, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "Performance-driven Analog Routing via Heterogeneous 3DGNN and Potential Relaxation", in
-    ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 23–27, 2024.
-    (<a href="https://shipxu123.github.io/papers/C11-DAC2024-PARoute.pdf">paper</a>)
-    (<a href="https://shipxu123.github.io/papers/C11-DAC2024-PARoute-slides.pdf">slides</a>)
-    (<a href="https://shipxu123.github.io/papers/C11-DAC2024-PARoute-poster.pdf">poster</a>)`
-  },
-  {
-    year: 2023,
-    venue: "ICML",
-    content: `<b>Peng Xu*</b>, Lin Zhang*, Xuanzhou Liu, Jiaqi Sun, Yue Zhao, Haiqin Yang, Bei Yu, "Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks", in
-    International Conference on Machine Learning (ICML), Hawaii, Jul. 23–29, 2023.
-    (<a href="https://shipxu123.github.io/papers/C3-ICML2023-NAC.pdf">paper</a>)
-    (<a href="https://shipxu123.github.io/papers/C3-ICML2023-NAC-slides.pdf">slides</a>)
-    (<a href="https://shipxu123.github.io/papers/C3-ICML2023-NAC-poster.pdf">poster</a>)
-    (<a href="https://github.com/shipxu123/NAC">codes</a>)`
-  },
-  {
     year: 2026,
     venue: "AAAI",
     content: `<b>Peng Xu*</b>, Yapeng Li*, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "KCLNet: Electrically Equivalence-Oriented Graph Representation Learning for Analog Circuits", in
@@ -237,6 +218,15 @@ const CONFERENCES = [
   {
     year: 2024,
     venue: "DAC",
+    content: `<b>Peng Xu</b>, Guojin Chen, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "Performance-driven Analog Routing via Heterogeneous 3DGNN and Potential Relaxation", in
+    ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 23–27, 2024.
+    (<a href="https://shipxu123.github.io/papers/C11-DAC2024-PARoute.pdf">paper</a>)
+    (<a href="https://shipxu123.github.io/papers/C11-DAC2024-PARoute-slides.pdf">slides</a>)
+    (<a href="https://shipxu123.github.io/papers/C11-DAC2024-PARoute-poster.pdf">poster</a>)`
+  },
+  {
+    year: 2024,
+    venue: "DAC",
     content: `Hongduo Liu, <b>Peng Xu</b>, Yuan Pu, Lihao Yin, Hui-Ling Zhen, Mingxuan Yuan, Tsung-Yi Ho, Bei Yu, "NeuroSelect: Learning to Select Clauses in SAT Solvers", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 23–27, 2024.
     (<a href="https://shipxu123.github.io/papers/C10-DAC2024-NeuroSelect.pdf">paper</a>)
@@ -278,6 +268,16 @@ const CONFERENCES = [
     (<a href="https://shipxu123.github.io/papers/C5-ICCAD2023-CongViG.pdf">paper</a>)
     (<a href="https://shipxu123.github.io/papers/C5-ICCAD2023-CongViG-slides.pdf">slides</a>)
     (<a href="https://shipxu123.github.io/papers/C5-ICCAD2023-CongViG-poster.pdf">poster</a>)`
+  },
+  {
+    year: 2023,
+    venue: "ICML",
+    content: `<b>Peng Xu*</b>, Lin Zhang*, Xuanzhou Liu, Jiaqi Sun, Yue Zhao, Haiqin Yang, Bei Yu, "Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks", in
+    International Conference on Machine Learning (ICML), Hawaii, Jul. 23–29, 2023.
+    (<a href="https://shipxu123.github.io/papers/C3-ICML2023-NAC.pdf">paper</a>)
+    (<a href="https://shipxu123.github.io/papers/C3-ICML2023-NAC-slides.pdf">slides</a>)
+    (<a href="https://shipxu123.github.io/papers/C3-ICML2023-NAC-poster.pdf">poster</a>)
+    (<a href="https://github.com/shipxu123/NAC">codes</a>)`
   },
   {
     year: 2023,
