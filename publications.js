@@ -17,7 +17,7 @@ const SORT_ORDER = "desc";
 const NEWS = [
   {
     date: "2026.02",
-    text: `🎉 Congratulations! 2 papers related to learning and optimization-driven analog placement accepted in ACM/IEEE Design Automation Conference (DAC).`
+    text: `🎉 Congratulations! 2 papers related to Learning and Optimization-driven Analog Placement accepted in ACM/IEEE Design Automation Conference (DAC).`
   },
   {
     date: "2026.02",
