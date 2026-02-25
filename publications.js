@@ -469,7 +469,7 @@ function renderNews() {
     }
   }
 
-  var html = '<ul>\n';
+  var html = '<div class="blockcontent"><ul>\n';
   for (var i = 0; i < limit; i++) {
     html += '  <li><p><b>' + NEWS[i].date + '</b>   ' + NEWS[i].text + '</p></li>\n';
   }
@@ -479,7 +479,7 @@ function renderNews() {
     html += '  <li><a href="' + moreLink + '">[More news]</a></li>\n';
   }
 
-  html += '</ul>\n';
+  html += '</ul></div>\n';
   newsContainer.innerHTML = html;
 }
 
