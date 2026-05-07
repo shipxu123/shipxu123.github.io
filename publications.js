@@ -114,6 +114,12 @@ const NEWS = [
 const CONFERENCES = [
   {
     year: 2026,
+    venue: "ICML",
+    content: `Yanfang Liu, Mingjun Wang, <b>Peng XU</b>, Rongliang Fu, Bei Yu, Tsung-Yi Ho, “AnalogVerifier: A Neuro-Symbolic Framework for Analog Circuit Verification”, in 
+    International Conference on Machine Learning (ICML), Seoul, Jul. 6–11, 2026.`
+  },
+  {
+    year: 2026,
     venue: "DAC",
     content: `<b>Peng Xu</b>, Mingzi Wang, Yapeng Li, Yuyang Ye, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "DiffSP: Differentiable Sequence Pair-based Analog Placement", in
     ACM/IEEE Design Automation Conference (DAC), Long Beach, Jul. 26–29, 2026.`
