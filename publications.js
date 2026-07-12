@@ -114,6 +114,18 @@ const NEWS = [
 const CONFERENCES = [
   {
     year: 2026,
+    venue: "ICCAD",
+    content: `Yapeng Li, <b>Peng Xu</b>, Shixin Chen, Jindong Tu, Tongkai Wu, Chong Tong, Bei Yu, Tinghuan Chen, “AMigration: Analog placement Migration via Adaptive Constraints Relaxation”, in 
+    IEEE/ACM International Conference on Computer-Aided Design (ICCAD), San Jose, Nov. 08–12, 2026.`
+  },
+  {
+    year: 2026,
+    venue: "ICCAD",
+    content: `Shixin Chen, <b>Peng Xu</b>, Yapeng Li, Tinghuan Chen, Bei Yu, “PatchWork: A Patch-Driven Framework for Efficient Analog Layout Automation via Legacy Knowledge Reuse”, in 
+    IEEE/ACM International Conference on Computer-Aided Design (ICCAD), San Jose, Nov. 08–12, 2026.`
+  },
+  {
+    year: 2026,
     venue: "ICML",
     content: `Yanfang Liu, Mingjun Wang, <b>Peng XU</b>, Rongliang Fu, Bei Yu, Tsung-Yi Ho, “AnalogVerifier: A Neuro-Symbolic Framework for Analog Circuit Verification”, in 
     International Conference on Machine Learning (ICML), Seoul, Jul. 6–11, 2026.`
@@ -307,6 +319,12 @@ const CONFERENCES = [
 // Sort: year -> venue -> index. Citations [J1], [J2]... are auto-generated.
 // ============================================================
 const JOURNALS = [
+  {
+    year: 2026,
+    venue: "TCAD",
+    content: `Yapeng Li, <b>Peng Xu</b>, Mingzhen Li Tsung-Yi Ho, Bei Yu, Tinghuan Chen, “Analog Circuit Representation Learning Informed by Kirchhoff’s Current Law”,
+    accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+  },
   {
     year: 2026,
     venue: "TODAES",
