@@ -322,6 +322,12 @@ const JOURNALS = [
   {
     year: 2026,
     venue: "TCAD",
+    content: ` Yuhao Ji, Jiaxi Jiang, Siting Liu, Yifan Shi, Yuntao Lu, <b>Peng Xu</b>, Xinyun Zhang, Ziyi Wang, Yibo Lin, Bei Yu, “LibTimer: Addressing Library Evolution in Pre-Routing Timing Prediction via Continuous Library Representation”,
+  accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+  },
+  {
+    year: 2026,
+    venue: "TCAD",
     content: `Yapeng Li, <b>Peng Xu</b>, Mingzhen Li Tsung-Yi Ho, Bei Yu, Tinghuan Chen, “Analog Circuit Representation Learning Informed by Kirchhoff’s Current Law”,
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
