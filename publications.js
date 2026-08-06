@@ -552,7 +552,7 @@ function renderPublications() {
 
   var confHtml = '\n<h3>Conference Proceedings</h3>\n<ul>\n';
   for (var i = 0; i < sortedConf.length; i++) {
-    var confNo = sortedConf.length - i;
+    var confNo = i + 1;
     confHtml += '  <li><p>\n    [C' + confNo + '] ' + sortedConf[i].content + '\n  </p></li>\n';
   }
   confHtml += '</ul>\n';
@@ -573,7 +573,7 @@ function renderPublications() {
 
   var jourHtml = '<h3>Journal Articles</h3>\n<ul>\n';
   for (var j = 0; j < sortedJour.length; j++) {
-    var jourNo = sortedJour.length - j;
+    var jourNo = j + 1;
     jourHtml += '  <li><p>\n    [J' + jourNo + '] ' + sortedJour[j].content + '\n  </p></li>\n';
   }
   jourHtml += '</ul>\n';
