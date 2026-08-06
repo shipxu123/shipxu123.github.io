@@ -109,20 +109,24 @@ const NEWS = [
 //                    Conference Proceedings
 //
 // Add new paper: append { year, venue, content } to the array.
-// Set ccfA/firstAuthor/correspondingAuthor to true when applicable.
-// Sort: CCF-A first author -> CCF-A corresponding author -> year -> index.
+// Set ccfA/ccfB/firstAuthor/correspondingAuthor to true when applicable.
+// Sort: CCF-A first author -> CCF-A corresponding author -> CCF-B first author
+//       -> CCF-A other author -> year -> index.
 // Citations [C1], [C2]... are auto-generated.
 // ============================================================
 const CONFERENCES = [
   {
     year: 2026,
     venue: "ICCAD",
+    ccfB: true,
+    firstAuthor: true,
     content: `Yapeng Li*, <b>Peng Xu*</b>, Shixin Chen, Jindong Tu, Tongkai Wu, Chong Tong, Bei Yu, Tinghuan Chen, “AMigration: Analog placement Migration via Adaptive Constraints Relaxation”, in
     IEEE/ACM International Conference on Computer-Aided Design (ICCAD), San Jose, Nov. 08–12, 2026.`
   },
   {
     year: 2026,
     venue: "ICCAD",
+    ccfB: true,
     content: `Shixin Chen, <b>Peng Xu</b>, Yapeng Li, Tinghuan Chen, Bei Yu, “PatchWork: A Patch-Driven Framework for Efficient Analog Layout Automation via Legacy Knowledge Reuse”, in 
     IEEE/ACM International Conference on Computer-Aided Design (ICCAD), San Jose, Nov. 08–12, 2026.`
   },
@@ -161,6 +165,8 @@ const CONFERENCES = [
   {
     year: 2024,
     venue: "ICCAD",
+    ccfB: true,
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Su Zheng, Yuyang Ye, Chen Bai, Siyuan Xu, Hao Geng, Tsung-Yi Ho, Bei Yu, "RankTuner: When Design Tool Parameter Tuning Meets Preference Bayesian Optimization", in
     IEEE/ACM International Conference on Computer-Aided Design (ICCAD), New Jersey, Oct. 27–31, 2024.
     (<a href="https://shipxu123.github.io/papers/C12-ICCAD2024-RankTuner.pdf">paper</a>)
@@ -170,6 +176,8 @@ const CONFERENCES = [
   {
     year: 2026,
     venue: "DATE",
+    ccfB: true,
+    firstAuthor: true,
     content: `<b>Peng Xu*</b>, Ziyang Yu*, Yuan Pu, Xinyun Zhang, Donger Luo, Hao Geng, Siyuan Xu, Tsung-Yi Ho, Bei Yu, "RATuner: Retrieval-Augmented VLSI Flow Design Parameter Tuning Framework", in
     IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Verona, Italy, Apr. 20–22, 2026.`
   },
@@ -190,6 +198,8 @@ const CONFERENCES = [
   {
     year: 2026,
     venue: "DATE",
+    ccfB: true,
+    firstAuthor: true,
     content: `Shixin Chen*, <b>Peng Xu*</b>, Yapeng Li, Tinghuan Chen, Bei Yu, "IP-Matcher: An Efficient One-to-Many Matching Framework for Analog Circuit Design and Reusing", in
     IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Verona, Italy, Apr. 20–22, 2026.`
   },
@@ -202,18 +212,21 @@ const CONFERENCES = [
   {
     year: 2026,
     venue: "DATE",
+    ccfB: true,
     content: `Siting Liu, <b>Peng Xu</b>, Peiyu Liao, Keren Zhu, Yibo Lin, Bei Yu, "Submodular Maximization-inspired Adaptive Routing Bend Space Planning", in
     IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Verona, Italy, Apr. 20–22, 2026.`
   },
   {
     year: 2026,
     venue: "DATE",
+    ccfB: true,
     content: `Xinheng Li, Donger Luo, Peng Xu, Ziyang Yu, Qi Sun, Tinghuan Chen, Bei Yu, Hao Geng, "EDA Flow Matters: Stage-Aware Parameter Optimization of Tool Chain", in
     IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Verona, Italy, Apr. 20–22, 2026.`
   },
   {
     year: 2025,
     venue: "ICCAD",
+    ccfB: true,
     content: `Jindong Tu, Yapeng Li, <b>Peng Xu</b>, Tuo Li, Guoqing Li, Zushuai Xie, Bei Yu, Tinghuan Chen, "RSizing: Robust Bayesian Optimization for Analog Circuit Sizing Under Process Variations", in
     IEEE/ACM International Conference on Computer-Aided Design (ICCAD), Munich, Oct. 26–30, 2025.`
   },
@@ -300,6 +313,7 @@ const CONFERENCES = [
   {
     year: 2023,
     venue: "ICCAD",
+    ccfB: true,
     content: `Su Zheng, Lancheng Zou, <b>Peng XU</b>, Siting Liu, Bei Yu, Martin Wong, "Lay-Net: Grafting Netlist Knowledge on Layout-Based Congestion Prediction", in
     International Conference on Computer-Aided Design (ICCAD), San Francisco, Oct. 29–Nov. 02, 2023.
     (<a href="https://shipxu123.github.io/papers/C5-ICCAD2023-CongViG.pdf">paper</a>)
@@ -338,8 +352,9 @@ const CONFERENCES = [
 //                      Journal Articles
 //
 // Add new paper: append { year, venue, content } to the array.
-// Set ccfA/firstAuthor/correspondingAuthor to true when applicable.
-// Sort: CCF-A first author -> CCF-A corresponding author -> year -> index.
+// Set ccfA/ccfB/firstAuthor/correspondingAuthor to true when applicable.
+// Sort: CCF-A first author -> CCF-A corresponding author -> CCF-B first author
+//       -> CCF-A other author -> year -> index.
 // Citations [J1], [J2]... are auto-generated.
 // ============================================================
 const JOURNALS = [
@@ -360,6 +375,8 @@ const JOURNALS = [
   {
     year: 2026,
     venue: "TODAES",
+    ccfB: true,
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Yuan Pu, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, “PAPlace: Performance-Driven Differentiable Analog Placement”,
     accepted by ACM Transactions on Design Automation of Electronic Systems (TODAES), 2026.`
   },
@@ -401,6 +418,8 @@ const JOURNALS = [
   {
     year: 2025,
     venue: "TODAES",
+    ccfB: true,
+    firstAuthor: true,
     content: `<b>Peng Xu*</b>, Su Zheng*, Mingzi Wang, Ziyang Yu, Shixin Chen, Tinghuan Chen, Keren Zhu, Tsung-Yi Ho, Bei Yu, "Rank-DSE: Neural Pareto Comparator of Microarchitecture Design Space Exploration",
     accepted by ACM Transactions on Design Automation of Electronic Systems (TODAES), 2025.
     (<a href="https://shipxu123.github.io/papers/J11-TODAES2025-Rank-DSE.pdf">paper</a>)`
@@ -408,6 +427,8 @@ const JOURNALS = [
   {
     year: 2024,
     venue: "TODAES",
+    ccfB: true,
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Siyuan Xu, Tinghuan Chen, Guojin Chen, Tsung-Yi Ho, Bei Yu, "DeepOTF: Learning Equations-constrained Prediction for Electromagnetic Behavior",
     accepted by ACM Transactions on Design Automation of Electronic Systems (TODAES), 2024.
     (<a href="https://shipxu123.github.io/papers/J5-TODAES2024-DeepOTF.pdf">paper</a>)`
@@ -415,6 +436,8 @@ const JOURNALS = [
   {
     year: 2023,
     venue: "T-ITS",
+    ccfB: true,
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Ke Wang, Mohammad Mehedi Hassan, Chien-Ming Chen, Weiguo Lin, Md. Rafiul Hassan, and Giancarlo Fortino, "Adversarial Robustness in Graph-based Neural Architecture Search for Edge AI Transportation Systems",
     accepted by IEEE Transactions on Intelligent Transportation Systems (T-ITS), 2023.
     (<a href="https://shipxu123.github.io/papers/J4_TITS2023-AdvNAS.pdf">paper</a>)`
@@ -492,11 +515,15 @@ const JOURNALS = [
 function renderPublications() {
   // Priority 0: CCF-A first/co-first author
   // Priority 1: CCF-A corresponding author
-  // Priority 2: all other publications
+  // Priority 2: CCF-B first/co-first author
+  // Priority 3: CCF-A other author
+  // Priority 4: all other publications
   var getPriority = function(publication) {
     if (publication.ccfA && publication.firstAuthor) return 0;
     if (publication.ccfA && publication.correspondingAuthor) return 1;
-    return 2;
+    if (publication.ccfB && publication.firstAuthor) return 2;
+    if (publication.ccfA) return 3;
+    return 4;
   };
 
   // Sort by priority, then year, then original index.
@@ -516,6 +543,7 @@ function renderPublications() {
       venue: p.venue,
       content: p.content,
       ccfA: p.ccfA,
+      ccfB: p.ccfB,
       firstAuthor: p.firstAuthor,
       correspondingAuthor: p.correspondingAuthor,
       _idx: i
@@ -536,6 +564,7 @@ function renderPublications() {
       venue: p.venue,
       content: p.content,
       ccfA: p.ccfA,
+      ccfB: p.ccfB,
       firstAuthor: p.firstAuthor,
       correspondingAuthor: p.correspondingAuthor,
       _idx: i
