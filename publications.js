@@ -108,14 +108,16 @@ const NEWS = [
 // ============================================================
 //                    Conference Proceedings
 //
-// Add new paper: append { year, venue, content } to the array
-// Sort: year -> venue -> index. Citations [C1], [C2]... are auto-generated.
+// Add new paper: append { year, venue, content } to the array.
+// Set ccfA/firstAuthor/correspondingAuthor to true when applicable.
+// Sort: CCF-A first author -> CCF-A corresponding author -> year -> index.
+// Citations [C1], [C2]... are auto-generated.
 // ============================================================
 const CONFERENCES = [
   {
     year: 2026,
     venue: "ICCAD",
-    content: `Yapeng Li, <b>Peng Xu</b>, Shixin Chen, Jindong Tu, Tongkai Wu, Chong Tong, Bei Yu, Tinghuan Chen, “AMigration: Analog placement Migration via Adaptive Constraints Relaxation”, in 
+    content: `Yapeng Li*, <b>Peng Xu*</b>, Shixin Chen, Jindong Tu, Tongkai Wu, Chong Tong, Bei Yu, Tinghuan Chen, “AMigration: Analog placement Migration via Adaptive Constraints Relaxation”, in
     IEEE/ACM International Conference on Computer-Aided Design (ICCAD), San Jose, Nov. 08–12, 2026.`
   },
   {
@@ -127,24 +129,32 @@ const CONFERENCES = [
   {
     year: 2026,
     venue: "ICML",
-    content: `Yanfang Liu, Mingjun Wang, <b>Peng XU</b>, Rongliang Fu, Bei Yu, Tsung-Yi Ho, “AnalogVerifier: A Neuro-Symbolic Framework for Analog Circuit Verification”, in 
+    ccfA: true,
+    correspondingAuthor: true,
+    content: `Yanfang Liu, Mingjun Wang, <b>Peng XU#</b>, Rongliang Fu, Bei Yu, Tsung-Yi Ho, “AnalogVerifier: A Neuro-Symbolic Framework for Analog Circuit Verification”, in
     International Conference on Machine Learning (ICML), Seoul, Jul. 6–11, 2026.`
   },
   {
     year: 2026,
     venue: "DAC",
+    ccfA: true,
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Mingzi Wang, Yapeng Li, Yuyang Ye, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "DiffSP: Differentiable Sequence Pair-based Analog Placement", in
     ACM/IEEE Design Automation Conference (DAC), Long Beach, Jul. 26–29, 2026.`
   },
   {
     year: 2026,
     venue: "DAC",
+    ccfA: true,
+    firstAuthor: true,
     content: `Yapeng Li*, <b>Peng Xu*</b>, Mingzi Wang and Tinghuan Chen, "AlphaPlacer: Analog Placement Enhanced by Monte Carlo Tree Search", in
     ACM/IEEE Design Automation Conference (DAC), Long Beach, Jul. 26–29, 2026.`
   },
   {
     year: 2026,
     venue: "AAAI",
+    ccfA: true,
+    firstAuthor: true,
     content: `<b>Peng Xu*</b>, Yapeng Li*, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "KCLNet: Electrically Equivalence-Oriented Graph Representation Learning for Analog Circuits", in
     AAAI Conference on Artificial Intelligence (AAAI), Singapore, Feb. 20–27, 2026. (Oral)`
   },
@@ -210,6 +220,7 @@ const CONFERENCES = [
   {
     year: 2025,
     venue: "DAC",
+    ccfA: true,
     content: `Hongduo Liu, Chen BAI, <b>Peng Xu</b>, Lihao Yin, Xianzhi Yu, Hui-Ling Zhen, Mingxuan Yuan, Tsung-Yi Ho, Bei Yu, "LLMShare: Optimizing LLM Inference Serving with Hardware Architecture Exploration", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 22–25, 2025.
     (<a href="https://shipxu123.github.io/papers/C15-DAC2025-LLMShare.pdf">paper</a>)
@@ -219,6 +230,7 @@ const CONFERENCES = [
   {
     year: 2025,
     venue: "DAC",
+    ccfA: true,
     content: `Ziyang Yu, <b>Peng Xu</b>, Zixiao WANG, Binwu Zhu, Qipan Wang, Yibo Lin, Runsheng Wang, Bei Yu, Martin Wong, "SDM-PEB: Spatial-Depthwise Mamba for Enhanced Post-Exposure Bake Simulation", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 22–25, 2025.
     (<a href="https://shipxu123.github.io/papers/C14-DAC2025-PEB.pdf">paper</a>)
@@ -228,6 +240,7 @@ const CONFERENCES = [
   {
     year: 2025,
     venue: "DAC",
+    ccfA: true,
     content: `Yuyang Ye, Xiangfei Hu, Yuchen Liu, <b>Peng Xu</b>, Yu Gong, Tinghuan Chen, Hao Yan, Bei Yu, Longxing Shi, "Rank-based Multi-objective Approximate Logic Synthesis via Monte Carlo Tree Search", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 22–25, 2025.
     (<a href="https://shipxu123.github.io/papers/C13-DAC2025-MOALS.pdf">paper</a>)
@@ -236,6 +249,8 @@ const CONFERENCES = [
   {
     year: 2024,
     venue: "DAC",
+    ccfA: true,
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Guojin Chen, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "Performance-driven Analog Routing via Heterogeneous 3DGNN and Potential Relaxation", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 23–27, 2024.
     (<a href="https://shipxu123.github.io/papers/C11-DAC2024-PARoute.pdf">paper</a>)
@@ -245,6 +260,7 @@ const CONFERENCES = [
   {
     year: 2024,
     venue: "DAC",
+    ccfA: true,
     content: `Hongduo Liu, <b>Peng Xu</b>, Yuan Pu, Lihao Yin, Hui-Ling Zhen, Mingxuan Yuan, Tsung-Yi Ho, Bei Yu, "NeuroSelect: Learning to Select Clauses in SAT Solvers", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 23–27, 2024.
     (<a href="https://shipxu123.github.io/papers/C10-DAC2024-NeuroSelect.pdf">paper</a>)
@@ -254,6 +270,7 @@ const CONFERENCES = [
   {
     year: 2024,
     venue: "DAC",
+    ccfA: true,
     content: `Guojin Chen, Hongquan He, <b>Peng Xu</b>, Hao Geng, Bei Yu, "Efficient Bilevel Source Mask Optimization", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 23–27, 2024.
     (<a href="https://shipxu123.github.io/papers/C9-DAC2024-BiSMO.pdf">paper</a>)
@@ -263,6 +280,7 @@ const CONFERENCES = [
   {
     year: 2024,
     venue: "DAC",
+    ccfA: true,
     content: `Xinyun Zhang*, Binwu Zhu*, Fangzhou Liu, Ziyi Wang, <b>Peng Xu</b>, Hong Xu, Bei Yu, "Disentangle, Align and Generalize: Learning A Timing Predictor from Different Technology Nodes", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 23–27, 2024.
     (<a href="https://shipxu123.github.io/papers/C8-DAC2024-AdaTimer.pdf">paper</a>)
@@ -272,6 +290,7 @@ const CONFERENCES = [
   {
     year: 2024,
     venue: "AAAI",
+    ccfA: true,
     content: `Haoyuan Wu*, Xinyun Zhang*, <b>Peng Xu</b>, Peiyu Liao, Xufeng Yao, Bei Yu, "p-Laplacian Adaptation for Generative Pre-trained Vision-Language Models", in
     AAAI Conference on Artificial Intelligence (AAAI), Vancouver, Feb. 20–27, 2024.
     (<a href="https://shipxu123.github.io/papers/C7-AAAI2024-AttnAdapter.pdf">paper</a>)
@@ -290,6 +309,8 @@ const CONFERENCES = [
   {
     year: 2023,
     venue: "ICML",
+    ccfA: true,
+    firstAuthor: true,
     content: `<b>Peng Xu*</b>, Lin Zhang*, Xuanzhou Liu, Jiaqi Sun, Yue Zhao, Haiqin Yang, Bei Yu, "Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks", in
     International Conference on Machine Learning (ICML), Hawaii, Jul. 23–29, 2023.
     (<a href="https://shipxu123.github.io/papers/C3-ICML2023-NAC.pdf">paper</a>)
@@ -300,6 +321,7 @@ const CONFERENCES = [
   {
     year: 2023,
     venue: "ICML",
+    ccfA: true,
     content: `Jiaqi Sun, Lin Zhang, Guangyi Chen, <b>Peng Xu</b>, Kun Zhang, Yujiu Yang, "Feature expansion for graph neural networks", in
     International Conference on Machine Learning (ICML), Hawaii, Jul. 23–29, 2023.
     (<a href="https://shipxu123.github.io/papers/C3-ICML2023-FEGNN.pdf">paper</a>)
@@ -315,19 +337,23 @@ const CONFERENCES = [
 // ============================================================
 //                      Journal Articles
 //
-// Add new paper: append { year, venue, content } to the array
-// Sort: year -> venue -> index. Citations [J1], [J2]... are auto-generated.
+// Add new paper: append { year, venue, content } to the array.
+// Set ccfA/firstAuthor/correspondingAuthor to true when applicable.
+// Sort: CCF-A first author -> CCF-A corresponding author -> year -> index.
+// Citations [J1], [J2]... are auto-generated.
 // ============================================================
 const JOURNALS = [
   {
     year: 2026,
     venue: "TCAD",
+    ccfA: true,
     content: ` Yuhao Ji, Jiaxi Jiang, Siting Liu, Yifan Shi, Yuntao Lu, <b>Peng Xu</b>, Xinyun Zhang, Ziyi Wang, Yibo Lin, Bei Yu, “LibTimer: Addressing Library Evolution in Pre-Routing Timing Prediction via Continuous Library Representation”,
   accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     year: 2026,
     venue: "TCAD",
+    ccfA: true,
     content: `Yapeng Li, <b>Peng Xu</b>, Mingzhen Li Tsung-Yi Ho, Bei Yu, Tinghuan Chen, “Analog Circuit Representation Learning Informed by Kirchhoff’s Current Law”,
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
@@ -340,12 +366,16 @@ const JOURNALS = [
   {
     year: 2025,
     venue: "TCAD",
+    ccfA: true,
+    firstAuthor: true,
     content: `<b>Peng Xu*</b>, Rong Sun*, Su Zheng, Song Chen, Qi Xu, Bei Yu, "DaVinci: Performance-Driven Analog Routing via Multi-modality Guidance Prediction",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2026.`
   },
   {
     year: 2025,
     venue: "TCAD",
+    ccfA: true,
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Yapeng Li, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "Ckt2Vec: Efficient Electrical Encoding for Analog Circuit Representations in Vector Space",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.
     (<a href="https://shipxu123.github.io/papers/J13-TCAD2025-Ckt2Vec.pdf">paper</a>)`
@@ -353,6 +383,8 @@ const JOURNALS = [
   {
     year: 2025,
     venue: "TCAD",
+    ccfA: true,
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Su Zheng, Yuyang Ye, Chen Bai, Siyuan Xu, Hao Geng, Tsung-Yi Ho, Bei Yu, "RankTuner: When Design Tool Parameter Tuning Meets Preference Bayesian Optimization",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.
     (<a href="https://shipxu123.github.io/papers/J12-TCAD2025-RankTuner.pdf">paper</a>)`
@@ -360,6 +392,8 @@ const JOURNALS = [
   {
     year: 2025,
     venue: "TCAD",
+    ccfA: true,
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Jindong Tu, Guojin Chen, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "PARoute2: Enhanced Analog Routing via Performance-Drive Guidance Generation",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.
     (<a href="https://shipxu123.github.io/papers/J10-TCAD2025-PARoute.pdf">paper</a>)`
@@ -395,18 +429,21 @@ const JOURNALS = [
   {
     year: 2025,
     venue: "TCAD",
+    ccfA: true,
     content: `Guojin Chen, <b>Peng Xu</b>, Hongquan He, Hao Geng, Bei Yu, "Efficient Bilevel Source Mask Optimization",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.`
   },
   {
     year: 2025,
     venue: "TCAD",
+    ccfA: true,
     content: `Donger Luo, Qi Sun, <b>Peng Xu</b>, Su Zheng, Qi Xu, Tinghuan Chen, Bei Yu, Hao Geng, "Attention-Based EDA Tool Parameter Explorer: From Hybrid Parameters to Multi-QoR Metrics",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.`
   },
   {
     year: 2025,
     venue: "TCAD",
+    ccfA: true,
     content: `Jindong Tu, Yapeng Li, Pengjia Li, <b>Peng Xu</b>, Qianru Zhang, Sanping Wan, Yongsheng Sun, Bei Yu, Tinghuan Chen, "SMART: Graph Learning-Boosted Subcircuit Matching for Large-scale Analog Circuits",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.
     (<a href="https://shipxu123.github.io/papers/J9-TCAD2025-SMART.pdf">paper</a>)`
@@ -414,6 +451,7 @@ const JOURNALS = [
   {
     year: 2025,
     venue: "TCAD",
+    ccfA: true,
     content: `Lancheng Zou, Su Zheng, <b>Peng Xu</b>, Siting Liu, Bei Yu, Martin D.F. Wong, "Lay-Net: Grafting Netlist Knowledge on Layout-Based Congestion Prediction",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.
     (<a href="https://shipxu123.github.io/papers/J8-TCAD2025-Lay-Net.pdf">paper</a>)`
@@ -421,6 +459,7 @@ const JOURNALS = [
   {
     year: 2025,
     venue: "TCAD",
+    ccfA: true,
     content: `Xinyun Zhang, Binwu Zhu, Fangzhou Liu, Jiaxi Jiang, Ziyi Wang, <b>Peng Xu</b>, Hong Xu, Bei Yu, "Pre-Routing Timing Prediction Across Different Technology Nodes",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.
     (<a href="https://shipxu123.github.io/papers/J7-TCAD2025-AdaTimer.pdf">paper</a>)`
@@ -428,6 +467,7 @@ const JOURNALS = [
   {
     year: 2024,
     venue: "TCAD",
+    ccfA: true,
     content: `Yuyang Ye, <b>Peng Xu</b>, Lizheng Ren, Tinghuan Chen, Hao Yan, Bei Yu, Longxing Shi, "Learning-driven Physically-aware Large-scale Circuit Gate Sizing",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2024.
     (<a href="https://shipxu123.github.io/papers/J6-TCAD2025-LearnSize.pdf">paper</a>)`
@@ -450,16 +490,36 @@ const JOURNALS = [
 //                      RENDER LOGIC (no need to modify)
 // ============================================================
 function renderPublications() {
-  // Sort: 1st by year, 2nd by original index
+  // Priority 0: CCF-A first/co-first author
+  // Priority 1: CCF-A corresponding author
+  // Priority 2: all other publications
+  var getPriority = function(publication) {
+    if (publication.ccfA && publication.firstAuthor) return 0;
+    if (publication.ccfA && publication.correspondingAuthor) return 1;
+    return 2;
+  };
+
+  // Sort by priority, then year, then original index.
   var sortFn = function(a, b) {
+    var cmpPriority = getPriority(a) - getPriority(b);
+    if (cmpPriority !== 0) return cmpPriority;
+
     var cmpYear = SORT_ORDER === "desc" ? b.year - a.year : a.year - b.year;
     if (cmpYear !== 0) return cmpYear;
     return a._idx - b._idx;
   };
 
-  // Sort conferences by year, then original order
+  // Sort conferences
   var sortedConf = CONFERENCES.map(function(p, i) {
-    return { year: p.year, venue: p.venue, content: p.content, _idx: i };
+    return {
+      year: p.year,
+      venue: p.venue,
+      content: p.content,
+      ccfA: p.ccfA,
+      firstAuthor: p.firstAuthor,
+      correspondingAuthor: p.correspondingAuthor,
+      _idx: i
+    };
   }).sort(sortFn);
 
   var confHtml = '\n<h3>Conference Proceedings</h3>\n<ul>\n';
@@ -471,7 +531,15 @@ function renderPublications() {
 
   // Sort journals
   var sortedJour = JOURNALS.map(function(p, i) {
-    return { year: p.year, venue: p.venue, content: p.content, _idx: i };
+    return {
+      year: p.year,
+      venue: p.venue,
+      content: p.content,
+      ccfA: p.ccfA,
+      firstAuthor: p.firstAuthor,
+      correspondingAuthor: p.correspondingAuthor,
+      _idx: i
+    };
   }).sort(sortFn);
 
   var jourHtml = '<h3>Journal Articles</h3>\n<ul>\n';
