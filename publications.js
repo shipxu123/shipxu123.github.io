@@ -117,6 +117,13 @@ const NEWS = [
 const CONFERENCES = [
   {
     year: 2026,
+    venue: "ICCD",
+    ccfB: true,
+    content: `Yanfang Liu, <b>Peng Xu</b>, Yapeng Li, Mingjun Wang, Leilei Jin, Rongliang Fu, Tinghuan Chen, Wei Xing, Bei Yu, Tsung-Yi Ho, “MigSizer: Physical-aware Sizing Improving Analog/RF Circuit Migration”, in
+    IEEE International Conference on Computer Design (ICCD), Hong Kong, Nov. 16–18, 2026.`
+  },
+  {
+    year: 2026,
     venue: "ICCAD",
     ccfB: true,
     firstAuthor: true,
