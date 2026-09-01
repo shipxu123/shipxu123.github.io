@@ -16,6 +16,30 @@ const SORT_ORDER = "desc";
 // ============================================================
 const NEWS = [
   {
+    date: "2026.08",
+    text: `🎉 Congratulations! Our work "MigSizer: Physical-aware Sizing Improving Analog/RF Circuit Migration" was accepted by IEEE International Conference on Computer Design (ICCD).`
+  },
+  {
+    date: "2026.07",
+    text: `🎉 Congratulations! Our work "LibTimer: Addressing Library Evolution in Pre-Routing Timing Prediction via Continuous Library Representation" was accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+  },
+  {
+    date: "2026.07",
+    text: `🎉 Congratulations! Our work "AMigration: Analog placement Migration via Adaptive Constraints Relaxation" was accepted by IEEE/ACM International Conference on Computer-Aided Design (ICCAD).`
+  },
+  {
+    date: "2026.07",
+    text: `🎉 Congratulations! Our work "PatchWork: A Patch-Driven Framework for Efficient Analog Layout Automation via Legacy Knowledge Reuse" was accepted by IEEE/ACM International Conference on Computer-Aided Design (ICCAD).`
+  },
+  {
+    date: "2026.07",
+    text: `🎉 Congratulations! Our work "Analog Circuit Representation Learning Informed by Kirchhoff's Current Law" was accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+  },
+  {
+    date: "2026.05",
+    text: `🎉 Congratulations! Our work "AnalogVerifier: A Neuro-Symbolic Framework for Analog Circuit Verification" was accepted by International Conference on Machine Learning (ICML).`
+  },
+  {
     date: "2026.02",
     text: `🎉 Congratulations! 2 papers related to Learning and Optimization-driven Analog Placement accepted in ACM/IEEE Design Automation Conference (DAC).`
   },
@@ -109,9 +133,7 @@ const NEWS = [
 //                    Conference Proceedings
 //
 // Add new paper: append { year, venue, content } to the array.
-// Set ccfA/ccfB/firstAuthor/correspondingAuthor to true when applicable.
-// Sort: CCF-A first author -> CCF-A corresponding author -> CCF-B first author
-//       -> CCF-A other author -> year -> index.
+// Sort: year -> original index.
 // Citations [C1], [C2]... are auto-generated.
 // ============================================================
 const CONFERENCES = [
@@ -359,9 +381,7 @@ const CONFERENCES = [
 //                      Journal Articles
 //
 // Add new paper: append { year, venue, content } to the array.
-// Set ccfA/ccfB/firstAuthor/correspondingAuthor to true when applicable.
-// Sort: CCF-A first author -> CCF-A corresponding author -> CCF-B first author
-//       -> CCF-A other author -> year -> index.
+// Sort: year -> original index.
 // Citations [J1], [J2]... are auto-generated.
 // ============================================================
 const JOURNALS = [
@@ -520,24 +540,8 @@ const JOURNALS = [
 //                      RENDER LOGIC (no need to modify)
 // ============================================================
 function renderPublications() {
-  // Priority 0: CCF-A first/co-first author
-  // Priority 1: CCF-A corresponding author
-  // Priority 2: CCF-B first/co-first author
-  // Priority 3: CCF-A other author
-  // Priority 4: all other publications
-  var getPriority = function(publication) {
-    if (publication.ccfA && publication.firstAuthor) return 0;
-    if (publication.ccfA && publication.correspondingAuthor) return 1;
-    if (publication.ccfB && publication.firstAuthor) return 2;
-    if (publication.ccfA) return 3;
-    return 4;
-  };
-
-  // Sort by priority, then year, then original index.
+  // Sort by year, then original index.
   var sortFn = function(a, b) {
-    var cmpPriority = getPriority(a) - getPriority(b);
-    if (cmpPriority !== 0) return cmpPriority;
-
     var cmpYear = SORT_ORDER === "desc" ? b.year - a.year : a.year - b.year;
     if (cmpYear !== 0) return cmpYear;
     return a._idx - b._idx;
@@ -549,17 +553,13 @@ function renderPublications() {
       year: p.year,
       venue: p.venue,
       content: p.content,
-      ccfA: p.ccfA,
-      ccfB: p.ccfB,
-      firstAuthor: p.firstAuthor,
-      correspondingAuthor: p.correspondingAuthor,
       _idx: i
     };
   }).sort(sortFn);
 
   var confHtml = '\n<h3>Conference Proceedings</h3>\n<ul>\n';
   for (var i = 0; i < sortedConf.length; i++) {
-    var confNo = i + 1;
+    var confNo = sortedConf.length - i;
     confHtml += '  <li><p>\n    [C' + confNo + '] ' + sortedConf[i].content + '\n  </p></li>\n';
   }
   confHtml += '</ul>\n';
@@ -570,17 +570,13 @@ function renderPublications() {
       year: p.year,
       venue: p.venue,
       content: p.content,
-      ccfA: p.ccfA,
-      ccfB: p.ccfB,
-      firstAuthor: p.firstAuthor,
-      correspondingAuthor: p.correspondingAuthor,
       _idx: i
     };
   }).sort(sortFn);
 
   var jourHtml = '<h3>Journal Articles</h3>\n<ul>\n';
   for (var j = 0; j < sortedJour.length; j++) {
-    var jourNo = j + 1;
+    var jourNo = sortedJour.length - j;
     jourHtml += '  <li><p>\n    [J' + jourNo + '] ' + sortedJour[j].content + '\n  </p></li>\n';
   }
   jourHtml += '</ul>\n';
