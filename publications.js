@@ -326,8 +326,7 @@ const CONFERENCES = [
     content: `Xinyun Zhang*, Binwu Zhu*, Fangzhou Liu, Ziyi Wang, <b>Peng Xu</b>, Hong Xu, Bei Yu, "Disentangle, Align and Generalize: Learning A Timing Predictor from Different Technology Nodes", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 23–27, 2024.
     (<a href="https://shipxu123.github.io/papers/C8-DAC2024-AdaTimer.pdf">paper</a>)
-    (<a href="https://shipxu123.github.io/papers/C8-DAC2024-AdaTimer-slides.pdf">slides</a>)
-    (<a href="https://shipxu123.github.io/papers/C8-DAC2024-AdaTimer-poster.pdf">poster</a>)`
+    (<a href="https://shipxu123.github.io/papers/C8-DAC2024-AdaTimer-slides.pdf">slides</a>)`
   },
   {
     year: 2024,
@@ -336,8 +335,7 @@ const CONFERENCES = [
     content: `Haoyuan Wu*, Xinyun Zhang*, <b>Peng Xu</b>, Peiyu Liao, Xufeng Yao, Bei Yu, "p-Laplacian Adaptation for Generative Pre-trained Vision-Language Models", in
     AAAI Conference on Artificial Intelligence (AAAI), Vancouver, Feb. 20–27, 2024.
     (<a href="https://shipxu123.github.io/papers/C7-AAAI2024-AttnAdapter.pdf">paper</a>)
-    (<a href="https://shipxu123.github.io/papers/C7-AAAI2024-AttnAdapter-slides.pdf">slides</a>)
-    (<a href="https://shipxu123.github.io/papers/C7-AAAI2024-AttnAdapter-poster.pdf">poster</a>)`
+    (<a href="https://shipxu123.github.io/papers/C7-AAAI2024-AttnAdapter-slides.pdf">slides</a>)`
   },
   {
     year: 2023,
@@ -599,9 +597,12 @@ function renderNews() {
     }
   }
 
+  var sortedNews = NEWS.slice().sort(function(a, b) {
+    return b.date.localeCompare(a.date);
+  });
   var html = '<div class="blockcontent"><ul>\n';
   for (var i = 0; i < limit; i++) {
-    html += '  <li><p><b>' + NEWS[i].date + '</b>   ' + NEWS[i].text + '</p></li>\n';
+    html += '  <li><p><b>' + sortedNews[i].date + '</b>   ' + sortedNews[i].text + '</p></li>\n';
   }
 
   var moreLink = newsContainer.getAttribute('data-more-link');
