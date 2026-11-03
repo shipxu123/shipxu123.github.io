@@ -17,115 +17,115 @@ const SORT_ORDER = "desc";
 const NEWS = [
   {
     date: "2026.08",
-    text: `🎉 Congratulations! Our work "MigSizer: Physical-aware Sizing Improving Analog/RF Circuit Migration" was accepted by IEEE International Conference on Computer Design (ICCD).`
+    text: `Our work "MigSizer: Physical-aware Sizing Improving Analog/RF Circuit Migration" was accepted by IEEE International Conference on Computer Design (ICCD).`
   },
   {
     date: "2026.07",
-    text: `🎉 Congratulations! Our work "LibTimer: Addressing Library Evolution in Pre-Routing Timing Prediction via Continuous Library Representation" was accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    text: `Our work "LibTimer: Addressing Library Evolution in Pre-Routing Timing Prediction via Continuous Library Representation" was accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     date: "2026.07",
-    text: `🎉 Congratulations! Our work "AMigration: Analog placement Migration via Adaptive Constraints Relaxation" was accepted by IEEE/ACM International Conference on Computer-Aided Design (ICCAD).`
+    text: `Our work "AMigration: Analog placement Migration via Adaptive Constraints Relaxation" was accepted by IEEE/ACM International Conference on Computer-Aided Design (ICCAD).`
   },
   {
     date: "2026.07",
-    text: `🎉 Congratulations! Our work "PatchWork: A Patch-Driven Framework for Efficient Analog Layout Automation via Legacy Knowledge Reuse" was accepted by IEEE/ACM International Conference on Computer-Aided Design (ICCAD).`
+    text: `Our work "PatchWork: A Patch-Driven Framework for Efficient Analog Layout Automation via Legacy Knowledge Reuse" was accepted by IEEE/ACM International Conference on Computer-Aided Design (ICCAD).`
   },
   {
     date: "2026.07",
-    text: `🎉 Congratulations! Our work "Analog Circuit Representation Learning Informed by Kirchhoff's Current Law" was accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    text: `Our work "Analog Circuit Representation Learning Informed by Kirchhoff's Current Law" was accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     date: "2026.05",
-    text: `🎉 Congratulations! Our work "AnalogVerifier: A Neuro-Symbolic Framework for Analog Circuit Verification" was accepted by International Conference on Machine Learning (ICML).`
+    text: `Our work "AnalogVerifier: A Neuro-Symbolic Framework for Analog Circuit Verification" was accepted by International Conference on Machine Learning (ICML).`
   },
   {
     date: "2026.02",
-    text: `🎉 Congratulations! 2 papers related to Learning and Optimization-driven Analog Placement accepted in ACM/IEEE Design Automation Conference (DAC).`
+    text: `2 papers related to Learning and Optimization-driven Analog Placement accepted in ACM/IEEE Design Automation Conference (DAC).`
   },
   {
     date: "2026.02",
-    text: `🎉 Congratulations! Our work "PAPlace: Performance-Driven Differentiable Analog Placement" accepted by ACM Transactions on Design Automation of Electronic Systems (TODAES), 2026.`
+    text: `Our work "PAPlace: Performance-Driven Differentiable Analog Placement" accepted by ACM Transactions on Design Automation of Electronic Systems (TODAES), 2026.`
   },
   {
     date: "2025.02",
-    text: `🎉 Congratulations! Our work "DaVinci: Performance-Driven Analog Routing via Multi-modality Guidance Prediction" accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    text: `Our work "DaVinci: Performance-Driven Analog Routing via Multi-modality Guidance Prediction" accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     date: "2025.12",
-    text: `🎉 Congratulations! Our work "Ckt2Vec" accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    text: `Our work "Ckt2Vec" accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     date: "2025.11",
-    text: `🎉 Congratulations! One paper related to Analog Circuit Representation Learning was accepted as an oral presentation in AAAI Conference on Artificial Intelligence (AAAI).`
+    text: `One paper related to Analog Circuit Representation Learning was accepted as an oral presentation in AAAI Conference on Artificial Intelligence (AAAI).`
   },
   {
     date: "2025.11",
-    text: `🎉 Congratulations! Four papers were accepted in IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE).`
+    text: `Four papers were accepted in IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE).`
   },
   {
     date: "2025.10",
-    text: `🎉 Congratulations! One paper related to Ranking-based Tool Parameter Tuning accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    text: `One paper related to Ranking-based Tool Parameter Tuning accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     date: "2025.05",
-    text: `🎉 Congratulations! One paper related to Ranking-based Architecture DSE accepted in ACM Transactions on Design Automation of Electronic Systems (TODAES).`
+    text: `One paper related to Ranking-based Architecture DSE accepted in ACM Transactions on Design Automation of Electronic Systems (TODAES).`
   },
   {
     date: "2025.03",
-    text: `🎉 Congratulations! Two papers related to analog circuit design have been accepted for publication in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    text: `Two papers related to analog circuit design have been accepted for publication in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     date: "2025.02",
-    text: `🎉 Congratulations! Three papers were accepted in ACM/IEEE Design Automation Conference (DAC).`
+    text: `Three papers were accepted in ACM/IEEE Design Automation Conference (DAC).`
   },
   {
     date: "2024.12",
-    text: `🎉 Congratulations! One paper related to Multi-modality Congestion Prediction accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    text: `One paper related to Multi-modality Congestion Prediction accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     date: "2024.12",
-    text: `🎉 Congratulations! One paper related to Timing Prediction Across Different Technology Nodes accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    text: `One paper related to Timing Prediction Across Different Technology Nodes accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     date: "2024.11",
-    text: `🎉 Congratulations! One paper related to Time-driven Gate Sizing accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
+    text: `One paper related to Time-driven Gate Sizing accepted in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).`
   },
   {
     date: "2024.07",
-    text: `🎉 Congratulations! One paper related to Ranking-based Tool Parameter Tuning accepted in International Conference on Computer-Aided Design (ICCAD).`
+    text: `One paper related to Ranking-based Tool Parameter Tuning accepted in International Conference on Computer-Aided Design (ICCAD).`
   },
   {
     date: "2024.04",
-    text: `🎉 Congratulations! One paper related to Neural Operator on Machine Learning for Passive Devices accepted in ACM Transactions on Design Automation of Electronic Systems (TODAES).`
+    text: `One paper related to Neural Operator on Machine Learning for Passive Devices accepted in ACM Transactions on Design Automation of Electronic Systems (TODAES).`
   },
   {
     date: "2024.02",
-    text: `🎉 Congratulations! Four papers were accepted in ACM/IEEE Design Automation Conference (DAC).`
+    text: `Four papers were accepted in ACM/IEEE Design Automation Conference (DAC).`
   },
   {
     date: "2023.12",
-    text: `🎉 Congratulations! One paper related to Parameter-Efficient Fine-Tuning (PEFT) in Vision-Language Models was accepted in AAAI Conference on Artificial Intelligence (AAAI).`
+    text: `One paper related to Parameter-Efficient Fine-Tuning (PEFT) in Vision-Language Models was accepted in AAAI Conference on Artificial Intelligence (AAAI).`
   },
   {
     date: "2023.04",
-    text: `🎉 Congratulations! One paper related to NAS in GNNs was accepted in International Conference on Machine Learning (ICML).`
+    text: `One paper related to NAS in GNNs was accepted in International Conference on Machine Learning (ICML).`
   },
   {
     date: "2022.07",
-    text: `🎉 Congratulations! One paper related to Transfer Adversarial Attack and NAS was accepted in IEEE Transactions on Intelligent Transportation Systems (T-ITS).`
+    text: `One paper related to Transfer Adversarial Attack and NAS was accepted in IEEE Transactions on Intelligent Transportation Systems (T-ITS).`
   },
   {
     date: "2022.05",
-    text: `🎉 Congratulations! One paper related to Backdoor Attack and NAS was accepted in IEEE Transactions on Industrial Informatics (TII).`
+    text: `One paper related to Backdoor Attack and NAS was accepted in IEEE Transactions on Industrial Informatics (TII).`
   },
   {
     date: "2022.01",
-    text: `🎉 Congratulations! Peng was awarded as Excellent Graduate from Harbin Institute of Technology.`
+    text: `Peng was awarded as Excellent Graduate from Harbin Institute of Technology.`
   },
   {
     date: "2022.12",
-    text: `🎉 Congratulations! Peng's thesis was nominated as Outstanding Dissertations from Harbin Institute of Technology.`
+    text: `Peng's thesis was nominated as Outstanding Dissertations from Harbin Institute of Technology.`
   }
 ];
 
