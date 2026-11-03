@@ -133,7 +133,9 @@ const NEWS = [
 //                    Conference Proceedings
 //
 // Add new paper: append { year, venue, content } to the array.
-// Sort: year -> original index.
+// Set authorRole to "first", "joint-first-leading", or "joint-first-second"
+// for first authorship; use correspondingAuthor: true for corresponding authorship.
+// Other papers with ccfA: true are shown before other remaining papers.
 // Citations [C1], [C2]... are auto-generated.
 // ============================================================
 const CONFERENCES = [
@@ -149,6 +151,7 @@ const CONFERENCES = [
     venue: "ICCAD",
     ccfB: true,
     firstAuthor: true,
+    authorRole: "joint-first-second",
     content: `Yapeng Li*, <b>Peng Xu*</b>, Shixin Chen, Jindong Tu, Tongkai Wu, Chong Tong, Bei Yu, Tinghuan Chen, “AMigration: Analog placement Migration via Adaptive Constraints Relaxation”, in
     IEEE/ACM International Conference on Computer-Aided Design (ICCAD), San Jose, Nov. 08–12, 2026.`
   },
@@ -172,6 +175,7 @@ const CONFERENCES = [
     venue: "DAC",
     ccfA: true,
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Mingzi Wang, Yapeng Li, Yuyang Ye, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "DiffSP: Differentiable Sequence Pair-based Analog Placement", in
     ACM/IEEE Design Automation Conference (DAC), Long Beach, Jul. 26–29, 2026.`
   },
@@ -180,6 +184,7 @@ const CONFERENCES = [
     venue: "DAC",
     ccfA: true,
     firstAuthor: true,
+    authorRole: "joint-first-second",
     content: `Yapeng Li*, <b>Peng Xu*</b>, Mingzi Wang and Tinghuan Chen, "AlphaPlacer: Analog Placement Enhanced by Monte Carlo Tree Search", in
     ACM/IEEE Design Automation Conference (DAC), Long Beach, Jul. 26–29, 2026.`
   },
@@ -188,6 +193,7 @@ const CONFERENCES = [
     venue: "AAAI",
     ccfA: true,
     firstAuthor: true,
+    authorRole: "joint-first-leading",
     content: `<b>Peng Xu*</b>, Yapeng Li*, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "KCLNet: Electrically Equivalence-Oriented Graph Representation Learning for Analog Circuits", in
     AAAI Conference on Artificial Intelligence (AAAI), Singapore, Feb. 20–27, 2026. (Oral)`
   },
@@ -196,6 +202,7 @@ const CONFERENCES = [
     venue: "ICCAD",
     ccfB: true,
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Su Zheng, Yuyang Ye, Chen Bai, Siyuan Xu, Hao Geng, Tsung-Yi Ho, Bei Yu, "RankTuner: When Design Tool Parameter Tuning Meets Preference Bayesian Optimization", in
     IEEE/ACM International Conference on Computer-Aided Design (ICCAD), New Jersey, Oct. 27–31, 2024.
     (<a href="https://shipxu123.github.io/papers/C12-ICCAD2024-RankTuner.pdf">paper</a>)
@@ -207,6 +214,7 @@ const CONFERENCES = [
     venue: "DATE",
     ccfB: true,
     firstAuthor: true,
+    authorRole: "joint-first-leading",
     content: `<b>Peng Xu*</b>, Ziyang Yu*, Yuan Pu, Xinyun Zhang, Donger Luo, Hao Geng, Siyuan Xu, Tsung-Yi Ho, Bei Yu, "RATuner: Retrieval-Augmented VLSI Flow Design Parameter Tuning Framework", in
     IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Verona, Italy, Apr. 20–22, 2026.`
   },
@@ -214,6 +222,7 @@ const CONFERENCES = [
     year: 2024,
     venue: "ASPDAC",
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Jintao Li, Tsung-Yi Ho, Bei Yu, Keren Zhu, "Performance-Driven Analog Layout Automation: Current Status and Future Directions", in
     IEEE/ACM Asian and South Pacific Design Automation Conference (ASPDAC), South Korea, Jan. 22–25, 2024. (Invited Paper)
     (<a href="https://shipxu123.github.io/papers/C6-ASPDAC2024-AnalogPD.pdf">paper</a>)
@@ -223,6 +232,7 @@ const CONFERENCES = [
     year: 2021,
     venue: "ICCC",
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Yihui Li, Yice Zhang, Jianxin Li Ruifeng Xu, GuozhongShi, and Feiran Hu, "Contrastive Learning for Multiple Models in One Supernet", in
     International Conference on Cognitive Computing (ICCC), Virtual Event, Dec. 12-23, 2021.`
   },
@@ -231,6 +241,7 @@ const CONFERENCES = [
     venue: "DATE",
     ccfB: true,
     firstAuthor: true,
+    authorRole: "joint-first-second",
     content: `Shixin Chen*, <b>Peng Xu*</b>, Yapeng Li, Tinghuan Chen, Bei Yu, "IP-Matcher: An Efficient One-to-Many Matching Framework for Analog Circuit Design and Reusing", in
     IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Verona, Italy, Apr. 20–22, 2026.`
   },
@@ -238,6 +249,7 @@ const CONFERENCES = [
     year: 2026,
     venue: "ASPDAC",
     firstAuthor: true,
+    authorRole: "joint-first-second",
     content: `Ziyang Yu*, <b>Peng Xu*</b>, Su Zheng, Siyuan XU, Hao Geng, Bei Yu, Martin Wong, "CausalTuner: Will Causality Help High-Dimensional EDA Tool Parameter Tuning", in
     IEEE/ACM Asian and South Pacific Design Automation Conference (ASPDAC), Hong Kong, Jan. 19-22, 2026.`
   },
@@ -296,6 +308,7 @@ const CONFERENCES = [
     venue: "DAC",
     ccfA: true,
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Guojin Chen, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "Performance-driven Analog Routing via Heterogeneous 3DGNN and Potential Relaxation", in
     ACM/IEEE Design Automation Conference (DAC), San Francisco, Jun. 23–27, 2024.
     (<a href="https://shipxu123.github.io/papers/C11-DAC2024-PARoute.pdf">paper</a>)
@@ -355,6 +368,7 @@ const CONFERENCES = [
     venue: "ICML",
     ccfA: true,
     firstAuthor: true,
+    authorRole: "joint-first-leading",
     content: `<b>Peng Xu*</b>, Lin Zhang*, Xuanzhou Liu, Jiaqi Sun, Yue Zhao, Haiqin Yang, Bei Yu, "Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks", in
     International Conference on Machine Learning (ICML), Hawaii, Jul. 23–29, 2023.
     (<a href="https://shipxu123.github.io/papers/C3-ICML2023-NAC.pdf">paper</a>)
@@ -405,6 +419,7 @@ const JOURNALS = [
     venue: "TODAES",
     ccfB: true,
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Yuan Pu, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, “PAPlace: Performance-Driven Differentiable Analog Placement”,
     accepted by ACM Transactions on Design Automation of Electronic Systems (TODAES), 2026.`
   },
@@ -413,6 +428,7 @@ const JOURNALS = [
     venue: "TCAD",
     ccfA: true,
     firstAuthor: true,
+    authorRole: "joint-first-leading",
     content: `<b>Peng Xu*</b>, Rong Sun*, Su Zheng, Song Chen, Qi Xu, Bei Yu, "DaVinci: Performance-Driven Analog Routing via Multi-modality Guidance Prediction",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2026.`
   },
@@ -421,6 +437,7 @@ const JOURNALS = [
     venue: "TCAD",
     ccfA: true,
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Yapeng Li, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "Ckt2Vec: Efficient Electrical Encoding for Analog Circuit Representations in Vector Space",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.
     (<a href="https://shipxu123.github.io/papers/J13-TCAD2025-Ckt2Vec.pdf">paper</a>)`
@@ -430,6 +447,7 @@ const JOURNALS = [
     venue: "TCAD",
     ccfA: true,
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Su Zheng, Yuyang Ye, Chen Bai, Siyuan Xu, Hao Geng, Tsung-Yi Ho, Bei Yu, "RankTuner: When Design Tool Parameter Tuning Meets Preference Bayesian Optimization",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.
     (<a href="https://shipxu123.github.io/papers/J12-TCAD2025-RankTuner.pdf">paper</a>)`
@@ -439,6 +457,7 @@ const JOURNALS = [
     venue: "TCAD",
     ccfA: true,
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Jindong Tu, Guojin Chen, Keren Zhu, Tinghuan Chen, Tsung-Yi Ho, Bei Yu, "PARoute2: Enhanced Analog Routing via Performance-Drive Guidance Generation",
     accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025.
     (<a href="https://shipxu123.github.io/papers/J10-TCAD2025-PARoute.pdf">paper</a>)`
@@ -448,6 +467,7 @@ const JOURNALS = [
     venue: "TODAES",
     ccfB: true,
     firstAuthor: true,
+    authorRole: "joint-first-leading",
     content: `<b>Peng Xu*</b>, Su Zheng*, Mingzi Wang, Ziyang Yu, Shixin Chen, Tinghuan Chen, Keren Zhu, Tsung-Yi Ho, Bei Yu, "Rank-DSE: Neural Pareto Comparator of Microarchitecture Design Space Exploration",
     accepted by ACM Transactions on Design Automation of Electronic Systems (TODAES), 2025.
     (<a href="https://shipxu123.github.io/papers/J11-TODAES2025-Rank-DSE.pdf">paper</a>)`
@@ -457,6 +477,7 @@ const JOURNALS = [
     venue: "TODAES",
     ccfB: true,
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Siyuan Xu, Tinghuan Chen, Guojin Chen, Tsung-Yi Ho, Bei Yu, "DeepOTF: Learning Equations-constrained Prediction for Electromagnetic Behavior",
     accepted by ACM Transactions on Design Automation of Electronic Systems (TODAES), 2024.
     (<a href="https://shipxu123.github.io/papers/J5-TODAES2024-DeepOTF.pdf">paper</a>)`
@@ -466,6 +487,7 @@ const JOURNALS = [
     venue: "T-ITS",
     ccfB: true,
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Ke Wang, Mohammad Mehedi Hassan, Chien-Ming Chen, Weiguo Lin, Md. Rafiul Hassan, and Giancarlo Fortino, "Adversarial Robustness in Graph-based Neural Architecture Search for Edge AI Transportation Systems",
     accepted by IEEE Transactions on Intelligent Transportation Systems (T-ITS), 2023.
     (<a href="https://shipxu123.github.io/papers/J4_TITS2023-AdvNAS.pdf">paper</a>)`
@@ -474,6 +496,7 @@ const JOURNALS = [
     year: 2023,
     venue: "TII",
     firstAuthor: true,
+    authorRole: "first",
     content: `<b>Peng Xu</b>, Ke Wang, Md. Rafiul Hassan, Mohammad Mehedi Hassan, and Chien-Ming Chen, "An Interpretive Perspective: Adversarial Trojaning Attack on Neural-Architecture-Search Enabled Edge AI Systems",
     accepted by IEEE Transactions on Industrial Informatics (TII), 2023.
     (<a href="https://shipxu123.github.io/papers/J3_TII2023-BadNAS.pdf">paper</a>)`
@@ -549,18 +572,26 @@ function renderPublications() {
     return a._idx - b._idx;
   };
 
-  // Preserve existing citation numbers, then put first-authored papers first.
-  function prioritizeFirstAuthors(papers) {
+  // Preserve citation numbers before applying authorship and CCF priorities.
+  function prioritizePapers(papers) {
     var chronological = papers.map(function(p, i) {
-      return { year: p.year, content: p.content, firstAuthor: !!p.firstAuthor, _idx: i };
+      return { year: p.year, content: p.content, authorRole: p.authorRole,
+        correspondingAuthor: !!p.correspondingAuthor, ccfA: !!p.ccfA, _idx: i };
     }).sort(sortFn);
     chronological.forEach(function(p, i) { p.citationNo = chronological.length - i; });
+    function priority(p) {
+      if (p.authorRole === "first") return 0;
+      if (p.authorRole === "joint-first-leading") return 1;
+      if (p.authorRole === "joint-first-second") return 2;
+      if (p.correspondingAuthor) return 3;
+      return p.ccfA ? 4 : 5;
+    }
     return chronological.sort(function(a, b) {
-      return Number(b.firstAuthor) - Number(a.firstAuthor) || sortFn(a, b);
+      return priority(a) - priority(b) || sortFn(a, b);
     });
   }
 
-  var sortedConf = prioritizeFirstAuthors(CONFERENCES);
+  var sortedConf = prioritizePapers(CONFERENCES);
 
   var confHtml = '\n<h3>Conference Proceedings</h3>\n<ul>\n';
   for (var i = 0; i < sortedConf.length; i++) {
@@ -569,7 +600,7 @@ function renderPublications() {
   }
   confHtml += '</ul>\n';
 
-  var sortedJour = prioritizeFirstAuthors(JOURNALS);
+  var sortedJour = prioritizePapers(JOURNALS);
 
   var jourHtml = '<h3>Journal Articles</h3>\n<ul>\n';
   for (var j = 0; j < sortedJour.length; j++) {
