@@ -213,6 +213,7 @@ const CONFERENCES = [
   {
     year: 2024,
     venue: "ASPDAC",
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Jintao Li, Tsung-Yi Ho, Bei Yu, Keren Zhu, "Performance-Driven Analog Layout Automation: Current Status and Future Directions", in
     IEEE/ACM Asian and South Pacific Design Automation Conference (ASPDAC), South Korea, Jan. 22–25, 2024. (Invited Paper)
     (<a href="https://shipxu123.github.io/papers/C6-ASPDAC2024-AnalogPD.pdf">paper</a>)
@@ -221,6 +222,7 @@ const CONFERENCES = [
   {
     year: 2021,
     venue: "ICCC",
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Yihui Li, Yice Zhang, Jianxin Li Ruifeng Xu, GuozhongShi, and Feiran Hu, "Contrastive Learning for Multiple Models in One Supernet", in
     International Conference on Cognitive Computing (ICCC), Virtual Event, Dec. 12-23, 2021.`
   },
@@ -235,6 +237,7 @@ const CONFERENCES = [
   {
     year: 2026,
     venue: "ASPDAC",
+    firstAuthor: true,
     content: `Ziyang Yu*, <b>Peng Xu*</b>, Su Zheng, Siyuan XU, Hao Geng, Bei Yu, Martin Wong, "CausalTuner: Will Causality Help High-Dimensional EDA Tool Parameter Tuning", in
     IEEE/ACM Asian and South Pacific Design Automation Conference (ASPDAC), Hong Kong, Jan. 19-22, 2026.`
   },
@@ -470,6 +473,7 @@ const JOURNALS = [
   {
     year: 2023,
     venue: "TII",
+    firstAuthor: true,
     content: `<b>Peng Xu</b>, Ke Wang, Md. Rafiul Hassan, Mohammad Mehedi Hassan, and Chien-Ming Chen, "An Interpretive Perspective: Adversarial Trojaning Attack on Neural-Architecture-Search Enabled Edge AI Systems",
     accepted by IEEE Transactions on Industrial Informatics (TII), 2023.
     (<a href="https://shipxu123.github.io/papers/J3_TII2023-BadNAS.pdf">paper</a>)`
@@ -545,36 +549,31 @@ function renderPublications() {
     return a._idx - b._idx;
   };
 
-  // Sort conferences
-  var sortedConf = CONFERENCES.map(function(p, i) {
-    return {
-      year: p.year,
-      venue: p.venue,
-      content: p.content,
-      _idx: i
-    };
-  }).sort(sortFn);
+  // Preserve existing citation numbers, then put first-authored papers first.
+  function prioritizeFirstAuthors(papers) {
+    var chronological = papers.map(function(p, i) {
+      return { year: p.year, content: p.content, firstAuthor: !!p.firstAuthor, _idx: i };
+    }).sort(sortFn);
+    chronological.forEach(function(p, i) { p.citationNo = chronological.length - i; });
+    return chronological.sort(function(a, b) {
+      return Number(b.firstAuthor) - Number(a.firstAuthor) || sortFn(a, b);
+    });
+  }
+
+  var sortedConf = prioritizeFirstAuthors(CONFERENCES);
 
   var confHtml = '\n<h3>Conference Proceedings</h3>\n<ul>\n';
   for (var i = 0; i < sortedConf.length; i++) {
-    var confNo = sortedConf.length - i;
+    var confNo = sortedConf[i].citationNo;
     confHtml += '  <li><p>\n    [C' + confNo + '] ' + sortedConf[i].content + '\n  </p></li>\n';
   }
   confHtml += '</ul>\n';
 
-  // Sort journals
-  var sortedJour = JOURNALS.map(function(p, i) {
-    return {
-      year: p.year,
-      venue: p.venue,
-      content: p.content,
-      _idx: i
-    };
-  }).sort(sortFn);
+  var sortedJour = prioritizeFirstAuthors(JOURNALS);
 
   var jourHtml = '<h3>Journal Articles</h3>\n<ul>\n';
   for (var j = 0; j < sortedJour.length; j++) {
-    var jourNo = sortedJour.length - j;
+    var jourNo = sortedJour[j].citationNo;
     jourHtml += '  <li><p>\n    [J' + jourNo + '] ' + sortedJour[j].content + '\n  </p></li>\n';
   }
   jourHtml += '</ul>\n';
