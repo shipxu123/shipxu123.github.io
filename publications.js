@@ -135,7 +135,7 @@ const NEWS = [
 // Add new paper: append { year, venue, content } to the array.
 // Set authorRole to "first", "joint-first-leading", or "joint-first-second"
 // for first authorship; use correspondingAuthor: true for corresponding authorship.
-// Other papers with ccfA: true are shown before other remaining papers.
+// Set ccfA, ccfB, or ccfC to true for the applicable CCF category.
 // Citations [C1], [C2]... are auto-generated.
 // ============================================================
 const CONFERENCES = [
@@ -221,6 +221,7 @@ const CONFERENCES = [
   {
     year: 2024,
     venue: "ASPDAC",
+    ccfC: true,
     firstAuthor: true,
     authorRole: "first",
     content: `<b>Peng Xu</b>, Jintao Li, Tsung-Yi Ho, Bei Yu, Keren Zhu, "Performance-Driven Analog Layout Automation: Current Status and Future Directions", in
@@ -248,6 +249,7 @@ const CONFERENCES = [
   {
     year: 2026,
     venue: "ASPDAC",
+    ccfC: true,
     firstAuthor: true,
     authorRole: "joint-first-second",
     content: `Ziyang Yu*, <b>Peng Xu*</b>, Su Zheng, Siyuan XU, Hao Geng, Bei Yu, Martin Wong, "CausalTuner: Will Causality Help High-Dimensional EDA Tool Parameter Tuning", in
@@ -495,6 +497,7 @@ const JOURNALS = [
   {
     year: 2023,
     venue: "TII",
+    ccfC: true,
     firstAuthor: true,
     authorRole: "first",
     content: `<b>Peng Xu</b>, Ke Wang, Md. Rafiul Hassan, Mohammad Mehedi Hassan, and Chien-Ming Chen, "An Interpretive Perspective: Adversarial Trojaning Attack on Neural-Architecture-Search Enabled Edge AI Systems",
@@ -576,17 +579,24 @@ function renderPublications() {
   function prioritizePapers(papers) {
     var chronological = papers.map(function(p, i) {
       return { year: p.year, content: p.content, authorRole: p.authorRole,
-        correspondingAuthor: !!p.correspondingAuthor, ccfA: !!p.ccfA, _idx: i };
+        correspondingAuthor: !!p.correspondingAuthor, ccfA: !!p.ccfA,
+        ccfB: !!p.ccfB, ccfC: !!p.ccfC, _idx: i };
     }).sort(sortFn);
     function priority(p) {
       if (p.authorRole === "first") return 0;
       if (p.authorRole === "joint-first-leading") return 1;
       if (p.authorRole === "joint-first-second") return 2;
       if (p.correspondingAuthor) return 3;
-      return p.ccfA ? 4 : 5;
+      return 4;
+    }
+    function ccfPriority(p) {
+      if (p.ccfA) return 0;
+      if (p.ccfB) return 1;
+      if (p.ccfC) return 2;
+      return 3;
     }
     return chronological.sort(function(a, b) {
-      return priority(a) - priority(b) || sortFn(a, b);
+      return priority(a) - priority(b) || ccfPriority(a) - ccfPriority(b) || sortFn(a, b);
     });
   }
 
