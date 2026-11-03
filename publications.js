@@ -572,13 +572,12 @@ function renderPublications() {
     return a._idx - b._idx;
   };
 
-  // Preserve citation numbers before applying authorship and CCF priorities.
+  // Sort by authorship and CCF priorities before assigning display numbers.
   function prioritizePapers(papers) {
     var chronological = papers.map(function(p, i) {
       return { year: p.year, content: p.content, authorRole: p.authorRole,
         correspondingAuthor: !!p.correspondingAuthor, ccfA: !!p.ccfA, _idx: i };
     }).sort(sortFn);
-    chronological.forEach(function(p, i) { p.citationNo = chronological.length - i; });
     function priority(p) {
       if (p.authorRole === "first") return 0;
       if (p.authorRole === "joint-first-leading") return 1;
@@ -595,7 +594,7 @@ function renderPublications() {
 
   var confHtml = '\n<h3>Conference Proceedings</h3>\n<ul>\n';
   for (var i = 0; i < sortedConf.length; i++) {
-    var confNo = sortedConf[i].citationNo;
+    var confNo = i + 1;
     confHtml += '  <li><p>\n    [C' + confNo + '] ' + sortedConf[i].content + '\n  </p></li>\n';
   }
   confHtml += '</ul>\n';
@@ -604,7 +603,7 @@ function renderPublications() {
 
   var jourHtml = '<h3>Journal Articles</h3>\n<ul>\n';
   for (var j = 0; j < sortedJour.length; j++) {
-    var jourNo = sortedJour[j].citationNo;
+    var jourNo = j + 1;
     jourHtml += '  <li><p>\n    [J' + jourNo + '] ' + sortedJour[j].content + '\n  </p></li>\n';
   }
   jourHtml += '</ul>\n';
