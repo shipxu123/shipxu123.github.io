@@ -575,7 +575,7 @@ function renderPublications() {
     return a._idx - b._idx;
   };
 
-  // Sort by authorship and CCF priorities before assigning display numbers.
+  // Sort by CCF category, then authorship, before assigning display numbers.
   function prioritizePapers(papers) {
     var chronological = papers.map(function(p, i) {
       return { year: p.year, content: p.content, authorRole: p.authorRole,
@@ -596,7 +596,7 @@ function renderPublications() {
       return 3;
     }
     return chronological.sort(function(a, b) {
-      return priority(a) - priority(b) || ccfPriority(a) - ccfPriority(b) || sortFn(a, b);
+      return ccfPriority(a) - ccfPriority(b) || priority(a) - priority(b) || sortFn(a, b);
     });
   }
 
